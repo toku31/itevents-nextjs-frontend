@@ -28,7 +28,7 @@ export default function HomePage({events}) {　//クライアント側②
 }
 
 export async function getStaticProps() {　　　// getServerSideProps()
-  const res = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=3`)  // 22 Connecting to the Strapi Api
+  const res = await fetch(`${API_URL}/events?_sort=date:DESC&_limit=3`)  // 22 Connecting to the Strapi Api
   // const res = await fetch(`${API_URL}/api/events`)
   const events = await res.json()
 

@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
   const total = await totalRes.json()
 
   // Fetch events
-  const eventRes = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=${PER_PAGE}&_start=${start}`)
+  const eventRes = await fetch(`${API_URL}/events?_sort=date:DESC&_limit=${PER_PAGE}&_start=${start}`)
   // const res = await fetch(`${API_URL}/api/events`)
   const events = await eventRes.json()
 
